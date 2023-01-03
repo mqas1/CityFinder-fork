@@ -6,10 +6,6 @@ body{
     background-color:#6CA1C7
 }
 
-.top-navbar{
-    justify-content: end;
-}
-
 .searchbar-bigcontainer{
     /* border-top: 1px solid #6CA1C7; */
     background-color: #E3EDF4!important;
