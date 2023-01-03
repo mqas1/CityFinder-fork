@@ -1,0 +1,19 @@
+.top-navbar{
+    justify-content: end;
+}
+
+.searchbar-bigcontainer{
+    border-top: 1px solid grey;
+}
+
+.searchbar-container{
+    justify-content: center!important;
+}
+
+.searchbar{
+    width:40%;
+}
+
+.searchtext{
+    width: 300px;
+}
