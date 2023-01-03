@@ -8,6 +8,15 @@ clicksearch.addEventListener("click", function(event){
     getcity(searchtext.value)
 })
 
+//Navbar links event listeners
+    //landing page
+var searchnav = document.querySelector("#searchnav")
+searchnav.addEventListener("click", function(event){
+    event.preventDefault()
+    location.replace("./index.html")
+})
+    //'my cities' page
+//code here
 
 var getcity = function(cityname){   
     // clear dom by deleting its elements (which are all inside of the #cityInfoDisplay div)
