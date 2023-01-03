@@ -1,0 +1,12 @@
+.custom-navbar-background-1 {
+    background-color:#5377A0;
+}
+
+.custom-navbar-text {
+    color: #7FAECF;
+}
+
+.custom-hero {
+    background-image: url("../images/Globe\ Hero\ IMage.PNG");
+    background-size: cover;
+}
