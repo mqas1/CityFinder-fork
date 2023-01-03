@@ -1,9 +1,9 @@
 .custom-navbar-background-1 {
-    background-color:#5377A0;
+    background-color:#6CA1C7
 }
 
-.custom-navbar-text {
-    color: #7FAECF;
+.top-navbar{
+    justify-content: end;
 }
 
 .custom-hero {
