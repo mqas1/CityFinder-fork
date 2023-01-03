@@ -40,6 +40,7 @@ var getcity = function(cityname){
         //creates ul element
         var citylist = document.createElement("ul")
         citylist.className = "list-group"
+        // citylist.setAttribute("style", "margin-top: 1%")
         bodydiv.appendChild(citylist)
 
         //creates li elements from API data        
