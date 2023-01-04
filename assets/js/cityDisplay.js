@@ -2,20 +2,20 @@
 var searchtext = document.querySelector(".searchtext")
 var clicksearch = document.querySelector(".clicksearch")
 
-//Event listener feeds user input into API
+//Event listener which feeds user input into API from searchbar
 clicksearch.addEventListener("click", function(event){
     event.preventDefault()
     getcity(searchtext.value)
-})
+})   
 
-//Navbar links event listeners
-    //landing page
+//Event listeners for navbar links
+    //landing page redirect
 var searchnav = document.querySelector("#searchnav")
 searchnav.addEventListener("click", function(event){
     event.preventDefault()
     location.replace("./index.html")
 })
-    //'my cities' page
+    //'my cities' page redirect
 //code here
 
 var getcity = function(cityname){   
@@ -224,7 +224,6 @@ var getweather = function(lat, lon){
     })
 }
 
-
 var addCityToStorage = function(CityName){
     // Cities are saved to localStorage in the format 'SavedCityN', where N is a number of any length
 
@@ -262,3 +261,17 @@ var addCityToStorage = function(CityName){
         num = Number(num) + 1
     return num
 }
+
+//Code which checks if user has arrived from landing page or 'my cities' page. Searches for given city (saved to localStorage) if so.
+//Landing page
+try{
+    SearchedVal = localStorage["Searched-City"].trim()
+
+    if (SearchedVal.length > 0){
+        getcity(SearchedVal)
+        localStorage.removeItem("Searched-City")
+    }
+}
+catch(err){}
+
+//My cities page
