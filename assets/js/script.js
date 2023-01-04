@@ -1,14 +1,11 @@
-// var name = Sydney
-// $.ajax({
-//     method: 'GET',
-//     url: 'https://api.api-ninjas.com/v1/city?name=' + name,
-//     headers: { 'X-Api-Key': 'G3W1Wgapc1pEWDW/367zqQ==imXostAsxI7vOQe9'},
-//     contentType: 'application/json',
-//     success: function(result) {
-//         console.log(result);
-//     },
-//     error: function ajaxError(jqXHR) {
-//         console.error('Error: ', jqXHR.responseText);
-//     }
-// });
 
+var input = document.querySelector("#search-bar");
+var submitBtn = document.querySelector("#submit-button");
+
+submitBtn.addEventListener('click', function() {
+    localStorage.setItem('Searched-City', input.value);
+
+    if (input.value.length !== 0 ) {
+        location.href="./cityDisplay.html"
+    }
+})
