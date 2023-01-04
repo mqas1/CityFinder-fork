@@ -175,8 +175,10 @@ var getweather = function(lat, lon){
         weatherContainer.setAttribute("style", "display: flex ; justify-content: space-evenly ; margin-top: 1%")
         document.body.appendChild(weatherContainer)
 
+        console.log(data)
         //Construct individual weather cards
-        for (var i=0; i<5 ; i++){
+        for (var i=0; i<5 ; i++){            
+            //Create card divs
             var weatherCard = document.createElement("div")
             weatherCard.classList.add("card")
             weatherCard.setAttribute("style", "width: 15rem")
@@ -199,30 +201,37 @@ var getweather = function(lat, lon){
             weatherDescription.textContent = data.list[0].weather[0].main 
             weatherCardBody.appendChild(weatherDescription)
 
-            for (prop in data.list[0].main){
+            //Time element
+            var weatherTime = document.createElement("p")
+            weatherTime.textContent = data.list[i].dt_txt
+            weatherTime.setAttribute("style", "font-style: italic")
+            weatherCardBody.appendChild(weatherTime)
+
+            //Weather data elements
+            for (prop in data.list[i].main){
                 if (prop === "temp"){
                     var weatherinfo = document.createElement("p")
-                    weatherinfo.textContent = `Temp: ${data.list[0].main[prop]}°`
+                    weatherinfo.textContent = `Temp: ${data.list[i].main[prop]}°`
                     weatherCardBody.appendChild(weatherinfo)
                 }
                 if (prop === "feels_like"){
                     var weatherinfo = document.createElement("p")
-                    weatherinfo.textContent = `Feels like: ${data.list[0].main[prop]}°`
+                    weatherinfo.textContent = `Feels like: ${data.list[i].main[prop]}°`
                     weatherCardBody.appendChild(weatherinfo)
                 }
                 if (prop === "temp_min"){
                     var weatherinfo = document.createElement("p")
-                    weatherinfo.textContent = `Min temp: ${data.list[0].main[prop]}°`
+                    weatherinfo.textContent = `Min temp: ${data.list[i].main[prop]}°`
                     weatherCardBody.appendChild(weatherinfo)
                 }
                 if (prop === "temp_max"){
                     var weatherinfo = document.createElement("p")
-                    weatherinfo.textContent = `Max temp: ${data.list[0].main[prop]}°`
+                    weatherinfo.textContent = `Max temp: ${data.list[i].main[prop]}°`
                     weatherCardBody.appendChild(weatherinfo)
                 }
                 if (prop === "humidity"){
                     var weatherinfo = document.createElement("p")
-                    weatherinfo.textContent = `Humidity: ${data.list[0].main[prop]}%`
+                    weatherinfo.textContent = `Humidity: ${data.list[i].main[prop]}%`
                     weatherCardBody.appendChild(weatherinfo)
                 }
             }
