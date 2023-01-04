@@ -8,5 +8,10 @@
 
 .custom-hero {
     background-image: url("../images/Globe\ Hero\ IMage.PNG");
+    background-color: rgba(0, 0, 0, 0.6);
     background-size: cover;
+}
+
+.custom-text {
+    color: white;
 }
