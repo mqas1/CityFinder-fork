@@ -35,15 +35,13 @@
   <main class="d-flex min-vh-100 custom-hero">
       
     <div class="container-fluid my-auto">
-      <h1 class="display-3 text-center">Welcome to City Finder</h1>
-      <h4 class= "text-center col-12">Enter your city</h4>
+      <h1 class="display-3 text-center custom-text">Welcome to City Finder</h1>
+      <h4 class= "text-center col-12 custom-text">Enter your city</h4>
       <div class="row justify-content-center">
         <div class="col-6 col-md-4 p-4 bg-dark">
           <div class="input-group rounded">
-              <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-              <span class="input-group-text border-0" id="search-addon">
-                <i class="fas fa-search"></i>
-              </span>
+            <input id = "search-bar" class="form-control me-2 searchtext" type="search" placeholder="Search City" aria-label="Search">
+            <button id = "submit-button" class="btn btn-success clicksearch" type="submit" >Search</button>
             </div>
         </div>
       </div>
