@@ -15,6 +15,12 @@ searchnav.addEventListener("click", function(event){
     event.preventDefault()
     location.replace("./index.html")
 })
+
+var navtitle = document.querySelector(".navtitle")
+navtitle.addEventListener("click", function(event){
+    event.preventDefault()
+    location.replace("./index.html")
+})
     //'my cities' page redirect
 //code here
 
