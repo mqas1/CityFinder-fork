@@ -2,6 +2,12 @@
 var input = document.querySelector("#search-bar");
 var submitBtn = document.querySelector("#submit-button");
 
+// Date&Time on NavBar//
+var time = document.querySelector("#Time")
+time.textContent=moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+
+
+
 submitBtn.addEventListener('click', function(event) {
     event.preventDefault()
     if (input.value.trim().length !== 0 ) {
