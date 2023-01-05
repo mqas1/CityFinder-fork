@@ -14,7 +14,12 @@
 
 // Date&Time on NavBar//
 var time = document.querySelector("#Time")
-time.textContent=moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+function displayTime(){
+    time.textContent=moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+}
+
+displayTime();
+setInterval(displayTime, 1000);
 
 // Declaring empty array to populate with city names from local storage
 var myCities = [];
