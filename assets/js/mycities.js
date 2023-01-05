@@ -1,3 +1,21 @@
+//Event listeners for navbar links
+    //landing page redirect
+    var searchnav = document.querySelector("#searchnav")
+    searchnav.addEventListener("click", function(event){
+        event.preventDefault()
+        location.replace("./index.html")
+    })
+    
+    var navtitle = document.querySelector(".navtitle")
+    navtitle.addEventListener("click", function(event){
+        event.preventDefault()
+        location.replace("./index.html")
+    })
+
+// Date&Time on NavBar//
+var time = document.querySelector("#Time")
+time.textContent=moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+
 // Declaring empty array to populate with city names from local storage
 var myCities = [];
 var listEl = document.getElementById("my-cities-list");
