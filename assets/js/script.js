@@ -1,11 +1,9 @@
-
 var input = document.querySelector("#search-bar");
 var submitBtn = document.querySelector("#submit-button");
 
 // Date&Time on NavBar//
 var time = document.querySelector("#Time")
 time.textContent=moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
-
 
 
 submitBtn.addEventListener('click', function(event) {
@@ -30,3 +28,8 @@ searchnav.addEventListener("click", function(event){
 })
 
 //Navbar 'my cities' link
+var mycitieslink = document.querySelector("#mycities")
+mycitieslink.addEventListener("click", function(event){
+    event.preventDefault()
+    location.replace("./mycities.html")
+})

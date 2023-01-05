@@ -1,3 +1,7 @@
+// Date&Time on NavBar//
+var time = document.querySelector("#Time")
+time.textContent=moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+
 // Select searchbar input box + searchbar button
 var searchtext = document.querySelector(".searchtext")
 var clicksearch = document.querySelector(".clicksearch")
@@ -22,8 +26,12 @@ navtitle.addEventListener("click", function(event){
     location.replace("./index.html")
 })
     //'my cities' page redirect
-//code here
-
+var mycitieslink = document.querySelector("#mycities")
+mycitieslink.addEventListener("click", function(event){
+    event.preventDefault()
+    location.replace("./mycities.html")
+})
+    
 var getcity = function(cityname){   
     // clear dom by deleting its elements (which are all inside of the #cityInfoDisplay div)
     var bodydiv = document.querySelector("#cityInfoDisplay")
@@ -290,3 +298,12 @@ try{
 catch(err){}
 
 //My cities page
+try{
+    SearchedVal = localStorage["clicked-city"].trim()
+
+    if (SearchedVal.length > 0){
+        getcity(SearchedVal)
+        localStorage.removeItem("clicked-city")
+    }
+}
+catch(err){}
