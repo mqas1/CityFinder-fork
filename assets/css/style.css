@@ -15,3 +15,10 @@
 .custom-text {
     color: white;
 }
+
+/* Date&Time on Navbar */
+#Time { 
+    position: fixed;
+    right: 40%;
+    font-size: 20px;
+}
