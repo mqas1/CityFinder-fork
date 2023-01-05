@@ -156,7 +156,7 @@ var getcity = function(cityname){
 }
 
 var getweather = function(lat, lon){
-    apiurl = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=3c1902a6683a6fc1079fef0612f33630&units=metric`
+    apiurl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=3c1902a6683a6fc1079fef0612f33630&units=metric`
     fetch(apiurl)
     .then(function(response){
         return response.json()
@@ -191,7 +191,7 @@ var getweather = function(lat, lon){
 
             //Weather icon element
             var icon = document.createElement("img")
-            icon.setAttribute("src", `http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`)
+            icon.setAttribute("src", `https://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`)
             icon.setAttribute("style", "width: 7rem ; align-self: center")
             icon.alt = "weather-icon"
             weatherCardBody.appendChild(icon)
