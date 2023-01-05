@@ -22,3 +22,15 @@ body{
 .searchtext{
     width: 300px;
 }
+
+@media screen and (max-width: 500px){
+    .weatherContainer{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2%;
+    }   
+
+    .card{
+        margin-top: 2%;
+    }
+}
