@@ -40,6 +40,12 @@ var getcity = function(cityname){
     for (var i=0 ; i < childrenNum ; i++){
         bodydiv.removeChild(bodydiv.firstElementChild)
     }
+
+    // Clear previous weather input from DOM each time function is called, if any exists
+    var clearWeather = document.querySelector(".weatherContainer")
+    if(clearWeather !== null){
+        clearWeather.remove()
+    }
     
     //Append inputted cityname to API link
     var apiurl = "https://api.api-ninjas.com/v1/city?name=" + cityname
