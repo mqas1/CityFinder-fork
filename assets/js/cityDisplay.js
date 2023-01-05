@@ -172,7 +172,7 @@ var getweather = function(lat, lon){
         //Container div for weather cards
         var weatherContainer = document.createElement("div")
         weatherContainer.classList.add("weatherContainer")
-        weatherContainer.setAttribute("style", "display: flex ; justify-content: space-evenly ; margin-top: 1%")
+        weatherContainer.setAttribute("style", "display: flex ; justify-content: space-evenly ; margin-top: 1%; margin-bottom: 1.5%")
         document.body.appendChild(weatherContainer)
 
         console.log(data)
