@@ -145,6 +145,7 @@ var getcity = function(cityname){
         //Disable event listener on 'save' button if current city is already saved in localStorage
         if (typeof(addCityToStorage(data[0].name)) === "boolean"){
             savebtn.disabled = true 
+            savebtn.textContent = "Saved!"
         }
 
         // return latitude and longitude for weather API
