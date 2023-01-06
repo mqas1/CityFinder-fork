@@ -1,18 +1,18 @@
-# Project-1
-First Major Project
+# City Finder
+## Project Description
 With the criteria of using 2 or more Server-side API's, while also being reactive to users input, we have created a webpage for travellers with the ability to display 
 information about any major city chosen.
 
-Based on the criteria provided and API's available, we decided to create City Finder 
+Based on the criteria provided and API's available, we decided to create City Finder. 
 
-User Story 
-
+### User Story
+```
 AS A traveller who wants to know more about potential cities to visit
 I WANT to be able to use a website to get an information fact sheet about any city
 SO THAT I can save time researching and be informed
-
-Acceptance Criteria
-
+```
+### Acceptance Criteria
+```
 Given I need to search a new city
 WHEN I type in a city name into the searchbar
 THEN a factsheet on the city is brought up and the searchbar moves to the top of the screen
@@ -34,9 +34,10 @@ THEN that cities fact sheet opens up
 Given I want to return to search from the my cities tab
 WHEN I click the ‘search’ button on the navbar
 THEN I am taken to the landing page
+```
+---
 
-
-City Finder 
+## Application Description 
 
 Our webpage aims to give easily accessible information for cities around to world to potential travellers, who can then save and revisit their favourite choices. 
 
@@ -45,7 +46,7 @@ API data on that particular city, including Population, weather, longitude and l
 The my cities page will then show all of the saved cities from the user, with each saved city being stored in the clients storage and presenting a small card for each city in the My cities page. 
 If an incorrect city name is input into the search bar or is mispelt, then the page will return a "city not found" error. 
 
-Features:
+## Features
 - Page will display city information for each city input
 - Weather cards are displayed showing the cities weather for the current day
 - Save button allows cities to be stored in clients storage
@@ -55,11 +56,11 @@ Features:
 - Nav elements will direct to either landing page or My Cities page
 
 City finder uses the following API's:
-City API (https://api-ninjas.com/api/city): Which gives acces to city information such as Country name, population and latitude and longitude.
-Weather API (https://api-ninjas.com/api/weather): This API takes the output longitude and latitude from City API as its input and provides a card display of 
+[City API](https://api-ninjas.com/api/city): Which gives acces to city information such as Country name, population and latitude and longitude.
+[Weather API](https://api-ninjas.com/api/weather): This API takes the output longitude and latitude from City API as its input and provides a card display of 
     the current weather in the city chosen.
 
-Screenshots: 
+## Screenshots 
 
 Working screenshot of City Finder Landing page
 ![Working screenshot of City Finder Landing page](./assets/images/landing-page.PNG)
@@ -72,11 +73,11 @@ City display page before any city has been entered
 City Display page after API's have been called
 ![City Display page after API's have been called](./assets/images/city-display-filled.PNG)
 
+---
+### [Deployed Link](https://niktern.github.io/Project-1-CityFinder/)
+---
 
-Deployed Link: https://niktern.github.io/Project-1-CityFinder/
-
-
-Future Features:
+## Future Features
 - Interactive map on landing page with clickable cities, as an alternative to searching cities
 - Tripadvisor APi link to display top sites within each city
 - Country information to be displayed on City Display page (Currency, language, exchange rate etc)
