@@ -81,13 +81,13 @@ myCities.forEach(element => {
 // If there is no images for the city name query the image is also set to the landing page hero image.
 
             if (response.status === 403) {
-                listItem.setAttribute("style", `background-image: url("./../../assets/images/Globe\ Hero\ IMage.PNG")`);
+                listItem.setAttribute("style", `background-image: url("./assets/images/Globe\ Hero\ IMage.PNG")`);
             } 
             return response.json();   
         })
         .then(function (data) {
             if (!data.results[0]){
-                listItem.setAttribute("style", `background-image: url("./../../assets/images/Globe\ Hero\ IMage.PNG")`);
+                listItem.setAttribute("style", `background-image: url("./assets/images/Globe\ Hero\ IMage.PNG")`);
             } else {
 
 // Hotlinking to the image URL as per the API guidelines, and using the Imgix parameters at the end for browser responsiveness at any size.
