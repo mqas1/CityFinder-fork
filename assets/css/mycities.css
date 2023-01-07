@@ -14,3 +14,33 @@ body{
     margin-bottom: 0;
     text-align: center;
 }
+
+/* Expands the bootstrap styling of the My Cities list,
+namely, in changing the size of the li items to allow for
+better display of the background images. */
+
+#my-cities-list {
+    margin-top: .5rem;
+}
+
+#my-cities-list > li {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    background-position: 100%;
+    margin-bottom: .5rem;
+    opacity: 75%;
+}
+
+#my-cities-list > li:hover {
+    opacity: 100%;
+}
+
+p > a {
+    text-underline-offset: 0.15rem;
+}
+
+p > a,
+p > a:hover{
+    color: white;
+}
