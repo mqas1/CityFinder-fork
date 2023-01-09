@@ -67,9 +67,10 @@ myCities.forEach(element => {
         location.replace("./cityDisplay.html");
     })
 
-// Calling the Unsplash.com API to get an image for every list item/city
-
-    var apiUrl = `https://api.unsplash.com/search/photos?client_id=p7zdoYH1xGlPyGjJsZrp0j6_jSVR0nJqeDFINBI2ks8&query=${element}&page=1&per_page=1&orientation=landscape`;
+// Calling the Unsplash.com API to get an image for every list item/city.
+// If there is a white space in the string, eg New York, the space is replaced with a hyphen for a more accurate search.
+    var queryValue = element.replace(/\s/g, "-").toLowerCase();
+    var apiUrl = `https://api.unsplash.com/search/photos?client_id=p7zdoYH1xGlPyGjJsZrp0j6_jSVR0nJqeDFINBI2ks8&query=${queryValue}&page=1&per_page=1&orientation=landscape`;
     fetch(apiUrl, {
         method: "GET"
     })
@@ -82,6 +83,7 @@ myCities.forEach(element => {
 
             if (response.status === 403) {
                 listItem.setAttribute("style", `background-image: url("./assets/images/Globe\ Hero\ IMage.PNG")`);
+                throw response.json(); 
             } 
             return response.json();   
         })
@@ -91,16 +93,17 @@ myCities.forEach(element => {
             } else {
 
 // Hotlinking to the image URL as per the API guidelines, and using the Imgix parameters at the end for browser responsiveness at any size.
-
-                listItem.setAttribute("style", `background-image: url(${data.results[0].urls.regular}+&dpr=2)`);
-            }
-
 // The photographer's name and profile is linked on the image, as well as a hyperlink to unsplash.com as per their API guidelines.
 
-            var creditEl = document.createElement("p");
-            creditEl.innerHTML = `Photo by <a href="${data.results[0].user.links.html}">${data.results[0].user.name}</a> on <a href="https://www.unsplash.com">Unsplash</a>.`;
-            listItem.appendChild(creditEl);
-            creditEl.setAttribute("class", "position-absolute bottom-0 end-0");
-            creditEl.setAttribute("style", "font-size: 11px; color: white; padding-right: 1.5rem");
-        }) 
+                listItem.setAttribute("style", `background-image: url(${data.results[0].urls.regular}+&dpr=2)`);
+                var creditEl = document.createElement("p");
+                creditEl.innerHTML = `Photo by <a href="${data.results[0].user.links.html}">${data.results[0].user.name}</a> on <a href="https://www.unsplash.com">Unsplash</a>`;
+                listItem.appendChild(creditEl);
+                creditEl.setAttribute("class", "position-absolute bottom-0 end-0 bg-secondary bg-opacity-50 p-2 mx-");
+                creditEl.setAttribute("style", "font-size: 11px; color: white");
+            }
+        })
+        .catch(error => {
+            console.error(error);
+          })
 })
