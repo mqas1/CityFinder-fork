@@ -55,10 +55,12 @@ If an incorrect city name is input into the search bar or is mispelt, then the p
 - City name will be a link that will redirect back to the search result for the city
 - Nav elements will direct to either landing page or My Cities page
 
-City finder uses the following API's:
-[City API](https://api-ninjas.com/api/city): Which gives acces to city information such as Country name, population and latitude and longitude.
-[Weather API](https://api-ninjas.com/api/weather): This API takes the output longitude and latitude from City API as its input and provides a card display of 
+### City finder uses the following API's:
+- [City API](https://api-ninjas.com/api/city): Which gives acces to city information such as Country name, population and latitude and longitude.
+- [Weather API](https://api-ninjas.com/api/weather): This API takes the output longitude and latitude from City API as its input and provides a card display of 
     the current weather in the city chosen.
+- [Unplash API](https://unsplash.com/developers): Adds images to each city on the My Cities page filtered by the city name and displays it within the city card. 
+- [Momentjs API](https://momentjs.com/docs/): Displays the current time on the webpage. 
 
 ## Screenshots 
 
