@@ -73,6 +73,12 @@ City display page before any city has been entered
 City Display page after API's have been called
 ![City Display page after API's have been called](./assets/images/city-display-filled.PNG)
 
+My Cities page with no saved cities
+![My Cities page with no saved cities](./assets/images/my-cities-page-blank.PNG)
+
+My Cities page with several saved cities, displaying the unsplashed API images
+![My Cities page with several saved cities, displaying the unsplashed API images](./assets/images/my-cities-page-filled.PNG)
+
 ---
 ### [Deployed Link](https://niktern.github.io/Project-1-CityFinder/)
 ---
@@ -85,4 +91,10 @@ City Display page after API's have been called
 - UI improvements
 - Exportable notes section in My cities page to allow users to plan upcoming trips
 - Flight tracker API to show flight times and link to potential booking websites
+---
 
+## Group GitHub Profiles
+- Nik - https://github.com/NikTern 
+- Morgan - https://github.com/mqas1 
+- Haillander - https://github.com/Haillander 
+- Michael - https://github.com/Mbosse97  
