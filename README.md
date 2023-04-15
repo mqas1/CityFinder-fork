@@ -82,7 +82,7 @@ My Cities page with several saved cities, displaying the unsplashed API images
 ![My Cities page with several saved cities, displaying the unsplashed API images](./assets/images/my-cities-page-filled.PNG)
 
 ---
-### [Deployed Link](https://niktern.github.io/Project-1-CityFinder/)
+### [Deployed Link](https://mqas1.github.io/CityFinder-fork/)
 ---
 
 ## Future Features
